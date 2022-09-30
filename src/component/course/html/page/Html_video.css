@@ -1,0 +1,144 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+
+.heading {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+
+}
+
+
+.main-video iframe {
+    width: 100%;
+}
+
+.main-video {
+ 
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+.container.main-video video {
+    border-radius: 5px;
+
+
+}
+
+.main-video .video-title {
+    color: black;
+    font-size: 10px;
+
+}
+
+.video-shh {
+    display: none;
+}
+
+.container .video-list {
+    
+    border-radius: 5px;
+    height:700px;
+    padding:3px;
+    overflow-y: scroll;
+}
+.vid-active1{
+    border:3px solid red
+}
+
+#player{
+    width:640px;
+     height:460px;
+     border-radius:15px;
+     border:1px solid black
+}
+.container .video-list::-webkit-scrollbar {
+    width: 7px;
+}
+
+.container .video-list::-webkit-scrollbar {
+  
+    border-radius: 50px;
+}
+
+.container .video-list .vid video {
+    width: 100px;
+    border-radius: 15px;
+}
+
+.container .video-list .vid {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    gap: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer
+}
+
+.container .video-list .vid:hover {
+    background:lightgreen;
+    font-size:medium
+}
+
+.container .video-list .vid .active {
+    background-color: aqua;
+}
+
+@media (max-width:991px) {
+    .container {
+        grid-template-columns: 1.5fr 1fr;
+        padding: 5px 5%;
+    }
+
+}
+
+@media (max-width:768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+        #player{
+        width: 100%;
+        height: 260px;
+      
+    }
+        .container .video-list {
+    
+            border-radius: 5px;
+            height: 375px;
+            overflow-y: scroll;
+        }
+
+    .container .video-list::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .video-shh {
+        display: none;
+    }
+
+}
+
+

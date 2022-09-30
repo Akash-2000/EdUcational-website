@@ -1,0 +1,153 @@
+
+
+
+
+
+1
+Introduction to MySQL   
+link:https://www.youtube.com/embed/PXw5m7Fki5U
+
+
+2
+MySQL Installation and setup   
+link:https://www.youtube.com/embed/40-W9s-RYIw
+
+3
+
+Creating the Database MySQL   
+link:https://www.youtube.com/embed/THVTk9bfXTU
+
+4
+Select Statement MySQL   
+link:https://www.youtube.com/embed/RWe1k3rt9Ug
+
+5
+Select Clause MySQL   
+
+link:https://www.youtube.com/embed/CA3ayXWq8hU
+6
+Where clause MySQL   
+link:https://www.youtube.com/embed/EqhHZuvLYVc
+
+7
+AND OR NOT operator MySQL   
+link:https://www.youtube.com/embed/3X41Ux6nHeM
+
+8
+IN operator MySQL   
+
+link:https://www.youtube.com/embed/qt_0wA8xdr8
+9
+Between Operator MySQL   
+link:https://www.youtube.com/embed/qt_0wA8xdr8
+
+10
+Like operator MySQL   
+link:https://www.youtube.com/embed/EKRfYbtZSOg
+
+11
+REGEXP operator MySQL   
+link:https://www.youtube.com/embed/2XHC8yotapc
+
+12
+IS Null operator MySQL   
+
+link:https://www.youtube.com/embed/qSPfKVnvrt4
+13
+Order By Clause MySQL   
+link:https://www.youtube.com/embed/pHlX_lHYPHg
+
+14
+Limit Clause MySQL   
+link:https://www.youtube.com/embed/baUsnaL7_uY
+
+15
+Inner Join   
+link:https://www.youtube.com/embed/RmkAeJ9t75w
+
+16
+Joining Across Database MySQL   
+link:https://www.youtube.com/embed/mkR_PmhEC_M
+
+17
+Self Join MySQL   
+link:https://www.youtube.com/embed/MUBFjJEiZZ0
+
+18
+Joining Multiple Tables   
+link:https://www.youtube.com/embed/WEgEW8mx8gQ
+
+19
+Compound Join Condition MySQL   
+link:https://www.youtube.com/embed/JUPyShXOjlA
+
+20
+Implicit Join Syntax MySQL   
+
+link:https://www.youtube.com/embed/_sA6lZBk2zg
+21
+Outer Join MySQL   
+link:https://www.youtube.com/embed/vEXGfuNqtCs
+
+22
+Outer Join between multiple tables   
+link:https://www.youtube.com/embed/dp9QOMiV6gM
+
+23
+Self Outer Join MySQL   
+link:https://www.youtube.com/embed/QuMG1XJhp8s
+
+24
+Using Clause MySQL   
+link:https://www.youtube.com/embed/RqOR8_YlqfU
+
+25
+Natural Joins MySQL   
+
+link:https://www.youtube.com/embed/vJ0enZcbSP0
+26
+Cross Joins MySQL   
+
+link:https://www.youtube.com/embed/pJPIhe5WMtQ
+27
+Unions MySQL   
+link:https://www.youtube.com/embed/zl1Q50a-KcA
+
+28
+Column Attributes MySQL   
+link:https://www.youtube.com/embed/IemB2DISkSc
+
+29
+Inserting a Single Row MySQL   
+link:https://www.youtube.com/embed/eCJZrDwWBFU
+
+30
+Inserting multiple rows MySQL   
+link:https://www.youtube.com/embed/AFaEG3BXsac
+31
+Inserting Hierarchical rows   
+link:https://www.youtube.com/embed/BgkC9xHVltU
+
+32
+Creating a copy of a table   
+link:https://www.youtube.com/embed/rIFTirjBmS8
+33
+Updating a single row MySQL   
+link:https://www.youtube.com/embed/u8T90uyuQVc
+
+34
+Updating Multiple rows MySQL   
+link:https://www.youtube.com/embed/9j9b7OZQB7g
+
+35
+Using Subqueries in updates   
+link:https://www.youtube.com/embed/1mDbJwFJyrg
+
+36
+Deleting rows MySQL   
+link:https://www.youtube.com/embed/Jd13BlGofGo
+
+37
+Restoring the Database 
+link:https://www.youtube.com/embed/PPR6eoOFleM
+
