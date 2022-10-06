@@ -16,13 +16,32 @@ import Scriptcard from "./component/course/typescript/typescript-card/typescript
 import Ts_video from "./component/course/typescript/page/typescript_video";
 import "./App.css"
 import Navbar from "./component/Navbar/navbar";
-import Course from "./nav-pages/course";
 import Compiler from "./nav-pages/compiler";
 import Article from "./nav-pages/article"
 import Search from "./nav-pages/search"
 import Logout from "./nav-pages/logout"
+import Login from "./component/login-logut/login";
+import Register from "./component/login-logut/Register";
+import Forgotpassword from "./component/login-logut/forgotpassword";
+import { useContext } from "react";
+import { Context } from "./context/context";
+import Verifiyotp from "./component/login-logut/verifiyotp";
+import LoginButt from "./component/login-logut/loginbut";
+import LinkedInPage from "./component/login-logut/linkedin";
+import Course from "./nav-pages/course";
+import Total_blog from "./component/blog/total_blog";
+import { LinkedInCallback } from 'react-linkedin-login-oauth2';
+import  { createContext, useReducer } from 'react';
+import GitLogin from "./component/login-logut/github-login/gitLogin";
+import { initialState, reducer } from "./component/login-logut/github-login/store/reducer/indexof";
+import Write from "./component/blog/write/write";
+import Single from "./component/blog/Pages/single/single";
+export const AuthContext = createContext();
 
-export default function App() {
+      export default function App() {
+           const [state, dispatch] = useReducer(reducer, initialState);
+           console.log(state)
+   const {user} = useContext(Context)
    return (
     <div className="App">     
 
@@ -42,36 +61,46 @@ export default function App() {
       </BrowserRouter>  */}
 
 
-         <>
+          <>
            <BrowserRouter>
+                 <AuthContext.Provider
+      value={{
+        state,
+        dispatch
+      }}
+    >
            <Routes>
-            <Route exact path="/" element={<Navbar/>}/>
+              <Route exact path="/allcards" element={<Allcards/>}/>
+         <Route exact path="/html-video" element={<Html_video/>}/>
+         <Route exact path="/course-video" element={<Course/>}/>
+         <Route exact path="/css-video" element={<Css_video/>}/>
+         <Route exact path="/js-video" element={<Js_video/>}/>
+         <Route exact path="/mongoDb-video" element={<Mongo_video/>}/>
+         <Route exact path="/sql-video" element={<Mysql_video/>}/>
+         <Route exact path="/node-video" element={<Node_video/>}/>
+         <Route exact path="/react-video" element={<React_video/>}/>
+         <Route exact path="/script-video" element={<Ts_video/>}/>
+           <Route exact path="/" element={<Navbar/>}/> 
             <Route exact path="/course" element={<Course/>}/>
             <Route exact path="/compiler" element={<Compiler/>}/>
             <Route exact path="/article" element={<Article/>}/>
             <Route exact path="/search" element={<Search/>}/>
-            <Route exact path="/logout" element={<Logout/>}/>
-
-           </Routes>
-            
-           </BrowserRouter>
-         </>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <Route exact path="/login" element={<Login/>}/>
+            <Route exact path="/register" element={<Register/>}/>
+            <Route exact path="/fpassword" element={<Forgotpassword/>}/>
+            <Route exact path="/verify" element={<Verifiyotp/>}/>
+            <Route exact path="/logbuu" element={<LoginButt/>}/>
+            <Route exact path="/linkedins" element={<LinkedInPage/>}/>
+            <Route exact path="/linkedin" component={<LinkedInCallback/>} />
+            <Route exact path="/totalblog" element={<Total_blog/>}/>
+             <Route path="/write" element={<Write/>}></Route>
+              <Route path="/post/:id" element={<Single/>}></Route>
+        <Route path="/git" element={<GitLogin/>}/>
+            </Routes>
+            </AuthContext.Provider>
+    
+            </BrowserRouter>
+         </> 
     </div>
    )
-
-}
+      }
