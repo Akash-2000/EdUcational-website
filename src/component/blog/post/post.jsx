@@ -5,27 +5,22 @@ export default function post(post1) {
   const  PF = "http://localhost:5000/images/"
   {console.log(PF+post1.post1.photo)}
   return (
-    <div className='post'>
-        
-      {post1.post1.photo && (
-        
-        <img className='postimg' src={PF+post1.post1.photo} alt=""/> )}
-        
-        <div className="postino">
-            <div className="postcategory">
-                {post1.post1.categories.map((c)=>{
-                    <span className='postcat'>{c.name}</span>
-                })}
-                
-            </div>
-            <Link to={`/post/${post1.post1._id}`} className="link">
-               <span className="postittle">{post1.post1.title}</span>
-            </Link>
-            <hr />
-            <span className="postdate">{new Date(post1.post1.createdAt).toDateString()}</span>
-            <p className="postdescription">{post1.post1.desc}</p>
-        </div>
-    </div>
 
+  <div class="card mb-3 mx-auto contianer-fluid">
+
+  <img class="card-img-top container "  src={PF+post1.post1.photo} alt="Card image cap"/>
+  <div class="card-body" >
+     <Link to={`/post/${post1.post1._id}`} className="link">
+    <h5 class="card-title">{post1.post1.title}</h5>
+    </Link>
+    
+    <p class="card-text">{post1.post1.desc}</p>    
+    <p class="card-text"><small class="text-muted">
+      
+      {Date(post1.post1.createdAt) }</small></p>
+  </div>
+     </div>
+ 
   )
-}
+        }
+

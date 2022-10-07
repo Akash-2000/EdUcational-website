@@ -16,6 +16,17 @@ export default function Course() {
       <Jscard/>
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm-4 mr-auto">
+     <HtmlCard/>
+    </div>
+    <div class="col-sm-4">
+     <CssCard/>
+    </div>
+    <div class="col-sm-4">
+      <Jscard/>
+    </div>
+  </div>
 </div>
   )
 }
