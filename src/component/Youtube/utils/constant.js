@@ -14,9 +14,10 @@ import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 
 
 export const categories = [
+  { name: 'Education', icon: <SchoolIcon />, },
   { name: 'New', icon: <HomeIcon />, },
   { name: 'Music', icon: <MusicNoteIcon /> },
-  { name: 'Education', icon: <SchoolIcon />, },
+
   { name: 'Podcast', icon: <GraphicEqIcon />, },
   { name: 'Movie', icon: <OndemandVideoIcon />, },
   { name: 'Gaming', icon: <SportsEsportsIcon />, },

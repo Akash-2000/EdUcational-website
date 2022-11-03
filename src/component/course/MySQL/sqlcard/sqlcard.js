@@ -1,5 +1,6 @@
 import React from 'react'
 import "./sqlcard.css"
+import { SiMysql } from "react-icons/si";
 import {useNavigate} from "react-router-dom"
 export default function Sqlcard() {
     const navigate = useNavigate()
@@ -12,7 +13,7 @@ export default function Sqlcard() {
    {/*     Javscript video  card    */}
   <div class="card-wrap" onClick={handleclick4}>
   <div class="card-header five">
-    <i class="fas fa-code"></i>
+    <i><SiMysql/></i>
   </div>
   <div class="card-content">
     <h1 class="card-title">My SQL</h1>

@@ -1,6 +1,6 @@
 import "./Html_video.css"
 import React from "react"
-
+import Navbar from "../../../Navbar/navbar";
 import { useState, useEffect, useRef } from "react";
 const props = "https://www.youtube.com/embed/VeIh9hQsZSA?modestbranding=1&rel=0&enablejsapi=1"
 
@@ -17,7 +17,8 @@ export default function Html_video() {
 
   
   return (
-
+    <div class="total-width">
+    <Navbar/>
     <div class="container">
         <div class="main-video">
            <div class="vid active1" >
@@ -125,7 +126,6 @@ export default function Html_video() {
         <div class="vid">
             <iframe class="video-shh" 
                ></iframe>
-            <i  class="fa-solid fa-circle-play"></i>
             <div class="video-title" src="https://www.youtube.com/embed/uICxY1skva0?modestbranding=1&rel=0&enablejsapi=1" onClick={handleclick}>18 Javascript in HTML</div>
         </div>
         <div class="vid">
@@ -137,6 +137,6 @@ export default function Html_video() {
 
     </div>
     </div>
-      
+    </div>      
   )
 }

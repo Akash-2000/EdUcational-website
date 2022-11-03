@@ -1,5 +1,7 @@
 .write {
     padding-top: 50px;
+    height: 100vh;
+    background-color: black;
 }
 
 .writerom {
@@ -7,6 +9,7 @@
 }
 
 .writinggroup {
+    margin-top: 10px;
     margin-left: 150px;
     display: flex;
     align-items: center;
@@ -29,7 +32,10 @@
     font-size: 30px;
     border: 20px;
     padding: 20px;
-    width: 70vw
+    width: 70vw;
+    color:white;
+    border:1px solid white;
+    background-color: black;
 }
 
 .Writetext {
@@ -55,4 +61,45 @@
     height: 250px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .write {
+            padding-top: 50px;
+            height: 100vh;
+            background-color: black;
+        }
+    
+        .writerom {
+            position: relative;
+        }
+    
+        .writinggroup {
+            
+    
+        }
+    
+        .writeicon {
+            width: 25px;
+            height: 25px;
+    
+    
+            font-size: 20px;
+            color: rgb(121, 118, 118);
+        }
+    
+        .writeinput {
+           
+        }
+    
+        .Writetext {
+            }
+    
+        .writesubmit {
+           
+        }
+    
+        .writeimg {
+          
+        }
 }

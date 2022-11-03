@@ -1,6 +1,7 @@
 import React from 'react'
 import "./nodecard.css"
 import {useNavigate} from "react-router-dom"
+import { DiNodejs } from "react-icons/di";
 export default function Nodecard() {
     const navigate = useNavigate()
     const handleclick5=()=>{
@@ -12,7 +13,7 @@ export default function Nodecard() {
    {/*     Javscript video  card    */}
   <div class="card-wrap" onClick={handleclick5}>
   <div class="card-header six">
-    <i class="fas fa-code"></i>
+    <i><DiNodejs/></i>
   </div>
   <div class="card-content">
     <h1 class="card-title">Node js</h1>

@@ -1,0 +1,60 @@
+.totalDiv1{
+    height:100vh;
+    background-color: black;
+}
+
+input#formBasicEmail {
+    border-radius: 99px;
+}
+input#formBasicPassword{
+    border-radius: 99px;
+}
+input#formgooglebutto{
+    border-radius: 99px;
+    color: black;
+}
+.formButton{
+    border:1px solid red
+}
+.rounded{
+    border-radius: 99px;
+}
+hr {
+    border: none;
+    border-top: 5px double white;
+    color: #fff;
+    overflow: visible;
+    text-align: center;
+  
+    height: 5px;
+
+
+}
+.borderRad{
+    border-radius: 10px;
+    text-decoration: none;
+    border:2px solid rgb(120, 116, 116);
+    background-color:black;
+    color:black;
+}
+
+.borderRad1 {
+    border-radius: 10px;
+    text-decoration: none;
+    
+}
+
+.col-sm .span{
+    color:black;
+}
+
+hr:after {
+    padding: 0 4px;
+    content: "OR";
+    font-size: larger;
+    color:white;
+    position: relative;
+    top: -13px;
+}
+
+

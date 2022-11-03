@@ -83,15 +83,15 @@
 .container .video-list .vid {
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: red;
     gap: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
-    cursor: pointer
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
 }
-
 .container .video-list .vid:hover {
     background: #eee;
 }

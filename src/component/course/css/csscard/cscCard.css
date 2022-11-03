@@ -11,9 +11,9 @@
     --color-text-btn: #ffffff;
     --card1-gradient-color1: #f12711;
     --card1-gradient-color2: #f5af19;
-    --card2-gradient-color1: #7F00FF;
-    --card2-gradient-color2: #E100FF;
-    --card3-gradient-color1: #3f2b96;
+    --card2-gradient-color1: rgb(53, 31, 143);
+    --card2-gradient-color2: #2663dd;
+    --card3-gradient-color1: #4e37b5;
     --card3-gradient-color2: #a8c0ff;
     --card4-gradient-color1: #11998e;
     --card4-gradient-color2: #38ef7d;
@@ -92,7 +92,7 @@ body {
 
 .card-action1:hover {
     color: #fff;
-    background:linear-gradient(to left, var(--card2-gradient-color1), var(--card2-gradient-color2));
+    background:linear-gradient(to left, var(--card3-gradient-color1), var(--card3-gradient-color1));
     animation: pulse 0.5s infinite;
 }
 
@@ -142,8 +142,8 @@ body {
     border-radius: 100% 0% 100% 0% / 0% 50% 50% 100%;
 }
 
-.card-header.two {
-    background: linear-gradient(to bottom left, var(--card2-gradient-color1), var(--card2-gradient-color2));
+.card-header.two1 {
+    background: linear-gradient(to bottom left, var(--card2-gradient-color1), var(--card2-gradient-color1));
 }
 
 .card-header.three {

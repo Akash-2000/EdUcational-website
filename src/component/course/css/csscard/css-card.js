@@ -1,6 +1,7 @@
 import React from 'react'
 import "./cscCard.css"
 import { useNavigate } from 'react-router-dom'
+import { DiCss3 } from "react-icons/di";
 export default function CssCard() {
       const navigate = useNavigate()
     const handleclick2=()=>{
@@ -9,8 +10,8 @@ export default function CssCard() {
  }
   return (
   <div class="card-wrap" onClick={handleclick2}>
-  <div class="card-header two">
-    <i class="fas fa-code"></i>
+  <div class="card-header two1">
+    <i><DiCss3/></i>
   </div>
   <div class="card-content">
     <h1 class="card-title">CSS</h1>

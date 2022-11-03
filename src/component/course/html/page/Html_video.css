@@ -13,11 +13,14 @@
     text-align: center;
     padding: 10px;
 }
-
+.total-width{
+    background-color: black;
+}
 .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 15px;
+    background-color: black;
     align-items: flex-start;
     padding: 5px 5%;
 
@@ -40,23 +43,24 @@
 
 .container.main-video video {
     border-radius: 5px;
+    border:10px solid red;
 
 
 }
 
 .main-video .video-title {
     color: black;
+    border:1px soid white;
     font-size: 10px;
 
 }
-
 .video-shh {
     display: none;
 }
 
 .container .video-list {
     
-    border-radius: 5px;
+    border-radius: 99px;
     height:700px;
     padding:3px;
     overflow-y: scroll;
@@ -88,13 +92,14 @@
 .container .video-list .vid {
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: red;
     gap: 15px;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
-    cursor: pointer
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
 }
 
 .container .video-list .vid:hover {
@@ -110,6 +115,8 @@
     .container {
         grid-template-columns: 1.5fr 1fr;
         padding: 5px 5%;
+        max-width: 100%;
+        
     }
 
 }
@@ -117,6 +124,7 @@
 @media (max-width:768px) {
     .container {
         grid-template-columns: 1fr;
+        background-color: black;
     }
 
         #player{

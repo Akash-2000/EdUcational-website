@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { SiMongodb } from "react-icons/si";
 import "./mongocard.css"
 
 export default function Mongocard() {
@@ -13,7 +14,7 @@ export default function Mongocard() {
    {/*     Javscript video  card    */}
   <div class="card-wrap" onClick={handleclick4}>
   <div class="card-header four">
-    <i class="fas fa-code"></i>
+    <i><SiMongodb/></i>
   </div>
   <div class="card-content">
     <h1 class="card-title">MongoDB</h1>

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./jscard.css"
 import {useNavigate} from "react-router-dom"
+import { DiJavascript1 } from "react-icons/di";
 export default function Jscard() {
     const navigate = useNavigate()
     const handleclick3=()=>{
@@ -11,8 +12,8 @@ export default function Jscard() {
     <>
    {/*     Javscript video  card    */}
   <div class="card-wrap" onClick={handleclick3}>
-  <div class="card-header three">
-    <i class="fas fa-code"></i>
+  <div class="card-header threejs">
+    <i><DiJavascript1/></i>
   </div>
   <div class="card-content">
     <h1 class="card-title">Javascript</h1>

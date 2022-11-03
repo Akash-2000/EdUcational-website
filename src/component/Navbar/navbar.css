@@ -1,3 +1,51 @@
-.logo-img{
-    border-radius:50%
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .container-fluid{
+     
+        display: flex;
+        align-items:center
+    }
+}
+.navcolor{
+    background-color: red;
+    border:1px solid red;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.rounded-circle{
+    margin-right: 5px;
+}
+
+.navbar-light .navbar-brand{
+    color:white
+}
+
+.navbar-light .navbar-toggler{
+    color: white;
+    border-color: white;
+}
+
+.nav-cor{
+    cursor:pointer
+}
+.red{
+    background-color:#FF0000;
+}
+.navbar-brand {
+    padding-top: var(--bs-navbar-brand-padding-y);
+    padding-bottom: var(--bs-navbar-brand-padding-y);
+    margin-right: var(--bs-navbar-brand-margin-end);
+    font-size: var(--bs-navbar-brand-font-size);
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    justify-content: flex-end;
+}
 }

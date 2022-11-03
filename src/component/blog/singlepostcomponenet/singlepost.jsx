@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import axios from "axios"
 import { useState } from "react";
 import {Link} from "react-router-dom";
+import Navbar from "../../Navbar/navbar";
 import { useContext } from "react"
 import { Context } from "../../../context/context"
 
@@ -48,8 +49,10 @@ export default function Singlepost() {
        
     }
     return (
+    <>
+
     <div className='singlepost'>
- 
+            <Navbar/>
         <div className="singlepostwrapper">
             {post.photo && (
             <div className="singleposting">
@@ -71,10 +74,10 @@ export default function Singlepost() {
             )}
             </h1>)}
             <div className="singlepostino">
-                <span className="singlepost">Author: 
+                <div className="singlepost">Author: 
                     <Link to={`/?username=${post.email}`}className="link"><b>{post.email}</b></Link>
-                    </span>
-                 <span className="singlepostdate">Date: <b>{new Date(post.createdAt).toDateString()}</b></span>
+                    </div>
+                 <div className="singlepostdate">Date: <b>{new Date(post.createdAt).toDateString()}</b></div>
             </div>
             {updatedMode ? (
                 <textarea className="singlepostInput" value={desc} onChange={(e)=>setdesc(e.target.value)}/>    
@@ -89,5 +92,6 @@ export default function Singlepost() {
             
         </div>
         </div>
+        </>
   )
 }

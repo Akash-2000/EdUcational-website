@@ -1,6 +1,6 @@
 import "./react_video.css"
 import React from "react"
-
+import Navbar from "../../../Navbar/navbar";
 import { useState, useEffect, useRef } from "react";
 
 
@@ -16,7 +16,8 @@ export default function React_video() {
 
   
   return (
-
+    <div class="total-width">
+    <Navbar/>
     <div class="container">
         <div class="main-video">
            <div class="vid active" >
@@ -248,7 +249,7 @@ Forms Part 2 React </div>
             <div class="video-title" src="https://www.youtube.com/embed/DC8EpPUG52E?modestbranding=1&rel=0&enablejsapi=1" onClick={handleclick}>48
 Conclusion React </div>
         </div>
-
+    </div>
     </div>
     </div>
       

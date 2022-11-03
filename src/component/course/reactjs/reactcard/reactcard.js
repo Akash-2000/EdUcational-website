@@ -1,5 +1,7 @@
 import React from 'react'
 import "./reactcard.css"
+import { FaReact } from "react-icons/fa";
+
 import {useNavigate} from "react-router-dom"
 export default function Reactcard() {
     const navigate = useNavigate()
@@ -12,7 +14,7 @@ export default function Reactcard() {
    {/*     react video  card    */}
   <div class="card-wrap" onClick={handleclick6}>
   <div class="card-header seven">
-    <i class="fas fa-code"></i>
+    <i><FaReact/></i>
   </div>
   <div class="card-content">
     <h1 class="card-title">React</h1>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import CodeEditorWindow from "./CodeEditorWindow";
+import "./Landing.css"
 import axios from "axios";
 import { classnames } from "./utils/general";
 import { languageOptions } from "./constants/languageOptions";
-
+import Navbar from "../Navbar/navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { defineTheme } from "./lib/defineTheme";
@@ -208,6 +209,7 @@ const Landing = () => {
 
   return (
     <>
+      <Navbar/>
       <ToastContainer
         position="top-right"
         autoClose={2000}
@@ -243,10 +245,10 @@ const Landing = () => {
         </div>
 
        <div class="row">
-          <div class="col-sm-4 border-2 border-black z-20 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-4 py-2 hover:shadow transition duration-200 bg-white flex-shrink-0">
+          <div class="col-sm-4 border-2 border-black z-20 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-4 py-2 hover:shadow transition duration-200  flex-shrink-0">
           <OutputWindow outputDetails={outputDetails} />
           </div>
-          <div class="col-sm-4 mt-4 border-2 border-black z-20 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-4 py-2 hover:shadow transition duration-200 bg-white flex-shrink-0 ">
+          <div class="col-sm-4 mt-4 border-2 border-black z-20 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-4 py-2 hover:shadow transition duration-200 bg-black flex-shrink-0 ">
             <CustomInput
               customInput={customInput}
               setCustomInput={setCustomInput}
@@ -255,7 +257,7 @@ const Landing = () => {
               onClick={handleCompile}
               disabled={!code}
               className={classnames(
-                "mt-4 border-2 border-black z-20 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-4 py-2 hover:shadow transition duration-200 bg-white flex-shrink-0",
+                "mt-4 border-2 border-black  border border-dark z-20 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-4 py-2 hover:shadow transition duration-200 text-success flex-shrink-0",
                 !code ? "opacity-50" : ""
               )}
             >

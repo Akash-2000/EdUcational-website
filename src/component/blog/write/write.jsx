@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "./write.css"
 import axios from "axios"
+import Navbar from "../../Navbar/navbar"
 import { useContext } from "react"
 import { Context } from "../../../context/context"
 
@@ -42,6 +43,8 @@ export default function Write() {
         }
       }
   return (
+    <>
+    <Navbar/>
     <div className="write">
       {file &&(
           <img  className="writeimg" src={URL.createObjectURL(file)}/>
@@ -64,5 +67,6 @@ export default function Write() {
         <button className="writesubmit" type="submit">Publish</button>
       </form>
     </div>
+    </>
   )
 }

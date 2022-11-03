@@ -1,5 +1,6 @@
 import React from 'react';
 import "./card.css";
+import { DiHtml5 } from "react-icons/di";
 import {useNavigate} from "react-router-dom"
 export default function HtmlCard() {
   const navigate = useNavigate()
@@ -16,8 +17,9 @@ export default function HtmlCard() {
 return(
 <>
   <div class="card-wrap" onClick={handleclick}>
-  <div class="card-header one">
-    <i class="fas fa-code"></i>
+  <div class="card-header one1">
+    
+    <i class="fhtml"><DiHtml5/></i>
   </div>
   <div class="card-content">
     <h1 class="card-title">HTML</h1>

@@ -1,15 +1,21 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login';
 import {Navigate, useNavigate} from "react-router-dom"
+import { useContext} from 'react'
+import { Context } from '../../context/context';
+
 function LoginButt() {
+    const {user,dispatch,isFetching} = useContext(Context)
     const handlefailure=(result)=>{
     console.log(result)
     alert(result)
     
   }
   const handleLogin=(googleData)=>{
-    console.log(googleData);
-    window.open("http://localhost:3000/","_self");
+    console.log(googleData.profileObj.email);
+     dispatch({type:"LOGIN_SUCESS",payload:googleData.profileObj.email})
+    console.log(user)
+   /*  window.open("http://localhost:3000/","_self"); */
 
   }
  

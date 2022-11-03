@@ -4,11 +4,18 @@ import Navbar from "./components/Navbar"
 import { Feed } from "./components";
 
 const Youtube = () => (
+  
+    <div>
+    <div class="row">
+   
+    </div>
+    <div class="row">
     <Box sx={{ backgroundColor: '#000' }}>
-      <Navbar />
       
+     <Navbar />  
     <Feed/>
   </Box>
+  </div>
+  </div>
 );
-
 export default Youtube;

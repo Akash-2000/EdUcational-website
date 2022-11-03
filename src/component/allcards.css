@@ -1,0 +1,9 @@
+.justify-content-center{
+    margin-left: 35px !important;
+}
+
+@media  screen and (min-device-width: 300px) and (max-device-width: 812px){
+    .justify-content-center {
+            margin-left: 45px !important;
+        }
+}

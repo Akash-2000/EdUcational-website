@@ -1,6 +1,6 @@
 import "./node_video.css"
 import React from "react"
-
+import Navbar from "../../../Navbar/navbar";
 import { useState, useEffect, useRef } from "react";
 
 
@@ -16,7 +16,8 @@ export default function Node_video() {
 
   
   return (
-
+    <div class="total-width">
+    <Navbar/>
     <div class="container">
         <div class="main-video">
            <div class="vid active" >
@@ -140,6 +141,6 @@ export default function Node_video() {
 
     </div>
     </div>
-      
+    </div>      
   )
 }

@@ -9,7 +9,7 @@
 :root {
     --color-text: #616161;
     --color-text-btn: #ffffff;
-    --card1-gradient-color1: #f12711;
+    --card1-gradient-color1: #e05a13;
     --card1-gradient-color2: #f5af19;
     --card2-gradient-color1: #7F00FF;
     --card2-gradient-color2: #E100FF;
@@ -94,8 +94,10 @@
      background:linear-gradient(to bottom left, var(--card1-gradient-color1), var(--card1-gradient-color2));
      animation: pulse 0.5s infinite;
  }
-
-
+svg {
+    vertical-align: middle;
+    font-size: 125px;
+}
 
  @keyframes pulse {
      0% {
@@ -135,7 +137,7 @@
     margin-bottom: 15px;
 }
 
-.card-header.one {
+.card-header.one1 {
     background: linear-gradient(to bottom left, var(--card1-gradient-color1), var(--card1-gradient-color2));
     border-radius: 100% 0% 100% 0% / 0% 50% 50% 100%;
 }

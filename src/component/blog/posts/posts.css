@@ -1,8 +1,16 @@
-.post {
+/* .post {
     flex: 9;
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
 
 
+}
+
+ */
+
+.div .container .d-flex .justify-content-cente{
+    margin:0px;
+    padding:0px;
+    border: 1px solid red;
 }

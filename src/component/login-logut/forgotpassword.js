@@ -5,6 +5,8 @@ import Form from 'react-bootstrap/Form';
 import { propTypes } from 'react-bootstrap/esm/Image';
 import {useNavigate} from 'react-router-dom';
  import axios from "axios"
+ import "./forgot.css"
+ import Navbar from "../../component/Navbar/navbar"
 import { useContext } from 'react';
 import { Context } from '../../context/context';
 
@@ -37,10 +39,12 @@ function Forgotpassword(props) {
     console.log(user)
   }
 return (
+    <div className='totalDiv1'>
+    <Navbar/>
     <Form className="col-lg-6 offset-lg-3" autoComplete="off" onSubmit={handlesubmit}>
-      <h1 className="text-center">Forgot Password</h1>
+      <h1 className="text-center text-light">Forgot Password</h1>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email</Form.Label>
+        <Form.Label className="text-light">Email</Form.Label>
         <Form.Control type="text" placeholder="Enter email"
         value={email}
         onChange={handelChange} />
@@ -52,6 +56,7 @@ return (
         Submit
       </Button>
     </Form>
+    </div>
   );
 }
 

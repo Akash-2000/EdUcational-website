@@ -1,6 +1,9 @@
 import React from 'react'
 import "./typescript-card.css"
 import {useNavigate} from "react-router-dom"
+import { SiTypescript } from "react-icons/si";
+
+
 export default function Scriptcard() {
     const navigate = useNavigate()
     const handleclick7=()=>{
@@ -12,7 +15,7 @@ export default function Scriptcard() {
    {/*     react video  card    */}
   <div class="card-wrap" onClick={handleclick7}>
   <div class="card-header eight">
-    <i class="fas fa-code"></i>
+    <i><SiTypescript/></i>
   </div>
   <div class="card-content">
     <h1 class="card-title">Type script</h1>

@@ -6,6 +6,7 @@ import Html_video from "./component/course/html/page/Html_video"
 import Css_video from "./component/course/css/page/css_video"
 import Js_video from "./component/course/javascript/page/js_video" 
 import Mongo_video from "./component/course/mongoDB/page/mongo_video";
+
 import Sqlcard from "./component/course/MySQL/sqlcard/sqlcard";
 import Mysql_video from "./component/course/MySQL/page/mysql_video";
 import Nodecard from "./component/course/nodejs/nodecard/nodecard";
@@ -29,24 +30,27 @@ import { Context } from "./context/context";
 import Verifiyotp from "./component/login-logut/verifiyotp";
 import LoginButt from "./component/login-logut/loginbut";
 import LinkedInPage from "./component/login-logut/linkedin";
+import { changepassword } from "./component/login-logut/changepassword";
 import VideoDetail from "./component/Youtube/components/VideoDetail"
 import Course from "./nav-pages/course";
 import Total_blog from "./component/blog/total_blog";
 import { LinkedInCallback } from 'react-linkedin-login-oauth2';
 import  { createContext, useReducer } from 'react';
 import GitLogin from "./component/login-logut/github-login/gitLogin";
+import SearchPage from "./component/Search/pages/SearchPage";
 import ChannelDetail from "./component/Youtube/components/channelDetail"
 import { initialState, reducer } from "./component/login-logut/github-login/store/reducer/indexof";
 import Write from "./component/blog/write/write";
 import Single from "./component/blog/Pages/single/single";
+import SearchEngine from "./component/Search/Search_e";
 import SearchFeed from "./component/Youtube/components/Searchfeed"
 import Youtube from "./component/Youtube/youtube";
 import Landing from "./component/Complier/Landing";
+
 export const AuthContext = createContext();
 
       export default function App() {
            const [state, dispatch] = useReducer(reducer, initialState);
-           console.log(state)
    const {user} = useContext(Context)
    return (
          
@@ -64,10 +68,12 @@ export const AuthContext = createContext();
          <Route exact path="/css-video" element={<Css_video/>}/>
          <Route exact path="/js-video" element={<Js_video/>}/>
          <Route exact path="/mongoDb-video" element={<Mongo_video/>}/>
+          <Route exact path="/linkedin" component={LinkedInCallback} />
          <Route exact path="/sql-video" element={<Mysql_video/>}/>
          <Route exact path="/node-video" element={<Node_video/>}/>
          <Route exact path="/react-video" element={<React_video/>}/>
          <Route exact path="/script-video" element={<Ts_video/>}/>
+         <Route exact path = "/changepassword"element={< changepassword/>}/>
            <Route exact path="/" element={<Navbar/>}/> 
             <Route exact path="/course" element={<Course/>}/>
             <Route exact path="/article" element={<Article/>}/>
@@ -87,9 +93,14 @@ export const AuthContext = createContext();
               <Route path="/youtube" element={<Youtube/>}></Route>
                <Route path='/video/:id' element={<VideoDetail />} />
                  <Route path='/channel/:id' element={<ChannelDetail />} />
+                 <Route path='/search_page' element={<SearchPage/>} />
+
                  <Route path='/search/:searchTerm' element={<SearchFeed />} />
         <Route path="/git" element={<GitLogin/>}/>
-        
+                     <Route path='/search_engine' element={<SearchEngine/>} />
+                         
+
+
             </Routes>
             </AuthContext.Provider>
     

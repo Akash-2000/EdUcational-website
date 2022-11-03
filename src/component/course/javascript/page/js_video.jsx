@@ -1,6 +1,6 @@
 import "./js_video.css"
 import React from "react"
-
+import Navbar from "../../../Navbar/navbar";
 import { useState, useEffect, useRef } from "react";
 
 
@@ -16,7 +16,8 @@ export default function Js_video() {
 
   
   return (
-
+    <div class="total-width">
+    <Navbar/>
     <div class="container">
         <div class="main-video">
            <div class="vid active" >
@@ -315,6 +316,6 @@ Async, await, Call back and promises in javascript</div>
 
     </div>
     </div>
-      
+     </div> 
   )
 }

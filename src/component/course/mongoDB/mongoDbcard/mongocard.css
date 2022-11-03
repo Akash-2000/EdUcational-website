@@ -15,8 +15,8 @@
     --card2-gradient-color2: #E100FF;
     --card3-gradient-color1: #3f2b96;
     --card3-gradient-color2: #a8c0ff;
-    --card4-gradient-color1: #11998e;
-    --card4-gradient-color2: #38ef7d;
+    --card4-gradient-color1: #4ed755;
+    --card4-gradient-color2: #03a340;
 }
 
 
@@ -153,7 +153,7 @@ body {
 }
 
 .card-header.four {
-    background: linear-gradient(to bottom left, var(--card4-gradient-color1), var(--card4-gradient-color2));
+    background: linear-gradient(to bottom left, #03a340, #4ed755);
     border-radius: 100% 0% 100% 0% / 0% 50% 50% 100%;
 }
 

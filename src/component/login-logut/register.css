@@ -1,0 +1,24 @@
+input#username{
+    border-radius: 99px;
+}
+
+input#email{
+    border-radius: 99px;
+}
+
+input#Dob{
+    border-radius: 99px;
+}
+
+input#country{
+    border-radius:99px;
+}
+
+
+input#pass{
+    border-radius: 99px;
+}
+
+input#cpass{
+    border-radius: 99px;
+}

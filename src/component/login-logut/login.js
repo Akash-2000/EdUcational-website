@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "../Navbar/navbar";
+import "./login.css"
 import 'bootstrap/dist/css/bootstrap.css';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
@@ -51,11 +53,14 @@ function Login(props) {
   }
   console.log(user)
   return (
+    <div>
+    <div className="totalDiv1">
+    <Navbar/>
     <Form className="col-lg-6 offset-lg-3" autoComplete="off" onSubmit={handlesubmit} >
-      <h1 className="text-center">Login</h1>
+      <h1 className="text-center text-light">Login</h1>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email</Form.Label>
-        <Form.Control type="email" placeholder="Enter email"
+        <Form.Label className="text-light">Email</Form.Label>
+        <Form.Control type="email" class="forminput" placeholder="Enter email"
         value={email}
         onChange={handelChange} />
         <Form.Text className="text-muted">
@@ -64,46 +69,48 @@ function Login(props) {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label  className="text-light">Password</Form.Label>
         <Form.Control type="password" placeholder="Password"
         value={password}
         onChange={handelChange1} />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" controlId="formButton">
         Submit
       </Button>
       <Form.Group>
+        <hr/>
         <br>
 
         </br>
-      </Form.Group>
-      <Form.Group>
-          <LoginButt />       
-      </Form.Group>
-        <Form.Group>
-          <LinkedInPage />       
-      </Form.Group>
-       <Form.Group>
-          <GitLogin />       
-      </Form.Group>
-      <Form.Group>
-        <Form.Text>
-       <Link to="/fpassword">Forgot password?</Link> 
-          
-        </Form.Text>
-      </Form.Group>
-            <Form.Group>
-        <Form.Text>
-      <Link to="/register" className="text-center">Dont have a account?sign in!</Link> 
-        </Form.Text>
-      </Form.Group>
-      <Form.Group>
-             </Form.Group>
+        </Form.Group>
+      <div>
+  <div class="row">
+    <div class="col-sm">
+          <LoginButt />    
+    </div>
+    <div class="col-sm">
+          <LinkedInPage />    
+    </div>
+    <div class="col-sm">
+       <GitLogin/> 
+    </div>
+  </div>
+</div>
+      <div className="d-flex flex-column">
+      <div>
+      <button className="btn btn-primary mt-2">
+       <Link  className="text-light borderRad1"to="/fpassword">Forgot password?</Link>
+      </button>
+      </div>
+      <div className="mt-2">
+      <button className=" btn btn-primary">
+      <Link to="/register" className="text-center text-light borderRad1">Dont have a account?sign in!</Link> 
+      </button>
+      </div>
+      </div>
           </Form>
-          
+          </div>
+  </div>
   );
 }
 

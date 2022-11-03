@@ -3,7 +3,7 @@ import {  Navigate  } from "react-router-dom";
 import Styled from "styled-components";
 import GithubIcon from "mdi-react/GithubIcon";
 import { AuthContext } from "../../../App";
-
+import "./gitlog.css"
 
 export default function GitLogin() {
 
@@ -13,7 +13,8 @@ export default function GitLogin() {
   const [data, setData] = useState({ errorMessage: "", isLoading: false });
 
   const { client_id, redirect_uri } = state;
-
+  console.log("github id: "+client_id)
+  console.log("github uri:"+ redirect_uri)
   useEffect(() => {
     // After requesting Github access, Github redirects back to your app with a code parameter
     const url = window.location.href;
@@ -76,15 +77,16 @@ export default function GitLogin() {
                 {
                   // Link to request GitHub access
                 }
+                
                 <a
-                  className="login-link"
+                  className="btn"
                   href={`https://github.com/login/oauth/authorize?scope=user&client_id=${client_id}&redirect_uri=${redirect_uri}`}
                   onClick={() => {
                     setData({ ...data, errorMessage: "" });
                   }}
                 >
                   <GithubIcon />
-                  <span>Login with GitHub</span>
+                  <span className="gistyle ms-1">Login with GitHub</span>
                 </a>
               </>
             )}
