@@ -54,7 +54,7 @@ function Register(props){
      dispatch({type:"LOGIN_START"})
     const arr = {"name":name,"email":email,"password":password}
     console.log(arr)
-     axios.post("http://localhost:5000/api/auth/register",arr).then((res)=>{
+     axios.post("https://educationbackend.herokuapp.com/api/auth/register",arr).then((res)=>{
           let userobj = (JSON.parse(res.config.data))
             if(res.statusText ==="OK"){
                 alert("sucessfully registered")

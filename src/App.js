@@ -74,7 +74,7 @@ export const AuthContext = createContext();
          <Route exact path="/react-video" element={<React_video/>}/>
          <Route exact path="/script-video" element={<Ts_video/>}/>
          <Route exact path = "/changepassword"element={< changepassword/>}/>
-           <Route exact path="/" element={<Navbar/>}/> 
+           <Route exact path="/" element={<Allcards/>}/> 
             <Route exact path="/course" element={<Course/>}/>
             <Route exact path="/article" element={<Article/>}/>
             <Route exact path="/search" element={<Search/>}/>

@@ -25,7 +25,7 @@ export default function GitLogin() {
     if (hasCode) {
       const newUrl = url.split("?code=");
       console.log(newUrl);
-      window.history.pushState({}, null, newUrl[0]);
+      window.history.pushState({}, null, newUrl[0]); 
       console.log(data);
       setData({ data, isLoading: true });
     console.log(data)
@@ -33,7 +33,7 @@ export default function GitLogin() {
         code: newUrl[1]
       };
       console.log(state);
-      const proxy_url ='http://localhost:5000/authenticate' ;
+      const proxy_url ='https://educationbackend.herokuapp.com/authenticate' ;
       console.log(proxy_url);
       // Use code parameter and other parameters to make POST request to proxy_server
       console.log("im here at 38");
@@ -119,7 +119,7 @@ const Wrapper = Styled.section`
       }
       > span:nth-child(2) {
         font-size: 1.1rem;
-        color: #808080;
+        color: #80s8080;
         margin-bottom: 70px;
       }
       > span:nth-child(3) {

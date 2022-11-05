@@ -36,7 +36,7 @@ function Login(props) {
     e.preventDefault()
     dispatch({type:"LOGIN_START"})
     const arr={"email":email,"password":password}
-      axios.post("http://localhost:5000/api/auth/login",arr).then((res)=>{
+      axios.post("https://educationbackend.herokuapp.com/api/auth/login",arr).then((res)=>{
        let userobj = (JSON.parse(res.config.data))
           console.log(userobj.email);
             if(res.data.status ==="ok"){
@@ -88,12 +88,12 @@ function Login(props) {
     <div class="col-sm">
           <LoginButt />    
     </div>
-    <div class="col-sm">
+   {/*  <div class="col-sm">
           <LinkedInPage />    
     </div>
     <div class="col-sm">
        <GitLogin/> 
-    </div>
+    </div> */}
   </div>
 </div>
       <div className="d-flex flex-column">

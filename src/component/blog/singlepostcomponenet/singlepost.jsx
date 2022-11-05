@@ -13,7 +13,7 @@ export default function Singlepost() {
     const location = useLocation()
     const path = location.pathname.split("/")[2];
     const [post,setpost]=useState({})
-    const  PF = "http://localhost:5000/images/"
+    const  PF = "https://educationbackend.herokuapp.com/images/"
      const {user} = useContext(Context)
     const[title,settitle]=useState("")
     const[desc,setdesc]=useState("")
@@ -21,7 +21,7 @@ export default function Singlepost() {
 
     useEffect(()=>{
         const getpost = async()=>{
-            const res = await axios.get(`http://localhost:5000/api/post/${path}`)
+            const res = await axios.get(`https://educationbackend.herokuapp.com/api/post/${path}`)
             setpost(res.data)
             settitle(res.data.title)
             setdesc(res.data.desc)
@@ -31,7 +31,7 @@ export default function Singlepost() {
     console.log(post)
     const handleDelete = async()=>{
         try {
-                await axios.delete(`http://localhost:5000/api/post/${path}`,{data:{email:user}})
+                await axios.delete(`https://educationbackend.herokuapp.com/api/post/${path}`,{data:{email:user}})
                 window.location.replace(`/totalblog`)    
         } catch (error) {
             
@@ -40,7 +40,7 @@ export default function Singlepost() {
     }
     const handleupdate = async()=>{
        try {
-                await axios.put(`http://localhost:5000/api/post/${path}`,{email:user,title,desc})
+                await axios.put(`https://educationbackend.herokuapp.com/api/post/${path}`,{email:user,title,desc})
                 //window.location.reload()
                 setupdatedMode(false)    
         } catch (error) {
@@ -56,6 +56,7 @@ export default function Singlepost() {
         <div className="singlepostwrapper">
             {post.photo && (
             <div className="singleposting">
+                {console.log(post.photo)}
                 <img className="singlepostimg" src={PF+post.photo}/>
             </div>
             )}

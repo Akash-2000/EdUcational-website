@@ -93,12 +93,11 @@
     color: white;
 }
 
-.container .video-list .vid:hover {
-    background: #eee;
-}
 
-.container .video-list .vid .active {
-    background-color: aqua;
+.container .video-list .vid:hover {
+    transform: scale(1.1);
+    background-color: red;
+    color:white;
 }
 
 @media (max-width:991px) {

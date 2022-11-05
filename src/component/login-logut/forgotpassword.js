@@ -22,7 +22,7 @@ function Forgotpassword(props) {
     e.preventDefault()
      dispatch({type:"LOGIN_START"})
     const arr={"email": email}
-     axios.post("http://localhost:5000/api/auth/forgotpassword",arr).then((res)=>{
+     axios.post("https://educationbackend.herokuapp.com/api/auth/forgotpassword",arr).then((res)=>{
       console.log(res)
        let userobj = (JSON.parse(res.config.data))
             if(res.statusText ==="OK"){

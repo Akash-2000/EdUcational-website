@@ -65,41 +65,40 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .write {
-            padding-top: 50px;
+            padding-top: 10px;
             height: 100vh;
             background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-    
         .writerom {
-            position: relative;
+            display: block;
         }
-    
+                .writeimg {
+                    margin-left: 10px;
+                    width: 60vw;
+                    height: 150px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
         .writinggroup {
-            
-    
-        }
-    
-        .writeicon {
-            width: 25px;
-            height: 25px;
-    
-    
-            font-size: 20px;
-            color: rgb(121, 118, 118);
-        }
-    
-        .writeinput {
-           
-        }
-    
-        .Writetext {
-            }
-    
-        .writesubmit {
-           
-        }
-    
-        .writeimg {
-          
-        }
+             margin-top: 10px;
+            margin-left: 10px;
+                }
+            .writesubmit{
+                    color: white;
+                    background-color: teal;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    position: unset;
+                    margin-top: 10px;
+                    margin-left: 50px;
+                    font-size: 20px;
+                }
+                .Writetext {
+                   margin-left: 20px;
+                }
 }

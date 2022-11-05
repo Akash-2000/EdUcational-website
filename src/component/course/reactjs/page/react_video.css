@@ -94,9 +94,10 @@
 }
 
 .container .video-list .vid:hover {
-    background: #eee;
+    transform: scale(1.1);
+    background-color: red;
+    color: white;
 }
-
 .container .video-list .vid .active {
     background-color: aqua;
 }

@@ -25,7 +25,7 @@ export default function Verifiyotp() {
     const handlesubmit = (e)=>{
     e.preventDefault()
     const arr={"otp": otp,"password":newpassword}
-     axios.post(`http://localhost:5000/api/auth/verifyotp/${user}`,arr).then(res=>{alert(res.data.error)})
+     axios.post(`https://educationbackend.herokuapp.com/api/auth/verifyotp/${user}`,arr).then(res=>{alert(res.data.error)})
      Navigate("/login")
   }
   return (

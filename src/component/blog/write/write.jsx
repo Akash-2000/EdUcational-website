@@ -27,7 +27,7 @@ export default function Write() {
           newpost.photo = filename;
           try {
             console.log("i tried to  put")
-            await axios.post("http://localhost:5000/api/upload",data)
+            await axios.post("https://educationbackend.herokuapp.com/api/upload",data)
             console.log("i compledr to  put")
           } catch (err) {
             console.log(err)
@@ -35,7 +35,7 @@ export default function Write() {
         }
         try{
           console.log(newpost)
-            const res = await axios.post("http://localhost:5000/api/post/blog",newpost)
+            const res = await axios.post("https://educationbackend.herokuapp.com/api/post/blog",newpost)
             console.log("i complete  post")
             window.location.replace(`/post/${res.data._id}`)
         }catch(err){

@@ -2,29 +2,30 @@ import React from 'react';
 import GoogleLogin from 'react-google-login';
 import {Navigate, useNavigate} from "react-router-dom"
 import { useContext} from 'react'
+import {gapi} from 'gapi-script'
 import { Context } from '../../context/context';
+import { useEffect } from 'react';
 
 function LoginButt() {
     const {user,dispatch,isFetching} = useContext(Context)
-    const handlefailure=(result)=>{
-    console.log(result)
-    alert(result)
+    const clientID = "303239102100-vvpnhg55266fqlg9lbv3ao8tsop4clul.apps.googleusercontent.com"
+    useEffect(()=>{
+      gapi.load("client:auth2",()=>{
+        gapi.auth2.init({clientId:clientID})
+      })
+    },[])
+  const responseGoogle=(rseponse)=>{
+     dispatch({type:"LOGIN_SUCESS",payload:rseponse.profileObj.email})
     
   }
-  const handleLogin=(googleData)=>{
-    console.log(googleData.profileObj.email);
-     dispatch({type:"LOGIN_SUCESS",payload:googleData.profileObj.email})
-    console.log(user)
-   /*  window.open("http://localhost:3000/","_self"); */
-
-  }
- 
+  /*707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleusercontent.com*/
+ /*658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com*/
     return (
         <GoogleLogin
-        clientId="707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleusercontent.com"
+        clientId={clientID}
         buttonText='Log in with Google'
-        onSuccess={handleLogin}
-        onFailure={handlefailure}
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
         cookiePolicy={'single_host_origin'}></GoogleLogin>
     );
 }

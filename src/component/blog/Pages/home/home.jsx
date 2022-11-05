@@ -14,7 +14,7 @@ export default function Home() {
   console.log(search)
   useEffect(()=>{
     const fetchposts = async() =>{
-      const res = await axios.get(`http://localhost:5000/api/post${search}`)
+      const res = await axios.get(`https://educationbackend.herokuapp.com/api/post${search}`)
       setposts1(res.data)
     }
     fetchposts()  
