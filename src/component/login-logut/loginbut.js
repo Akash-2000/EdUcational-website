@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 function LoginButt() {
     const {user,dispatch,isFetching} = useContext(Context)
-    const clientID = "303239102100-vvpnhg55266fqlg9lbv3ao8tsop4clul.apps.googleusercontent.com"
+    const clientID = "303239102100-ootbj6iv6aknefmj493p2s62h6f2t2tt.apps.googleusercontent.com"
     useEffect(()=>{
       gapi.load("client:auth2",()=>{
         gapi.auth2.init({clientId:clientID})
